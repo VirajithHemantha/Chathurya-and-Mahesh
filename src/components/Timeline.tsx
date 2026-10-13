@@ -1,12 +1,12 @@
 import React from 'react';
 import { motion } from 'motion/react';
-import { Heart, Music, Camera, Utensils, PartyPopper } from 'lucide-react';
+import { Heart, Music, Utensils, PartyPopper, Star } from 'lucide-react';
 
 const events = [
-  { time: '09:00 AM', title: 'Poruwa Ceremony', icon: Music, desc: 'The traditional and sacred Poruwa ceremony at Hilton Colombo' },
-  { time: '10:00 AM', title: 'Function Starts', icon: Heart, desc: 'A warm welcome to our loved ones' },
-  { time: '12:30 PM', title: 'Buffet opening', icon: Utensils, desc: 'A grand celebratory feast' },
-  { time: '04:00 PM', title: 'Wedding send off', icon: PartyPopper, desc: 'Farewell as we begin our journey together' },
+  { time: 'පෙ.ව. 9.00', title: 'ශ්‍රී විවාහ මංගල්ලය', icon: Star, desc: 'Grand Rockland, Matara හිදී ශ්‍රී සුභ විවාහ උත්සවය ආරම්භ වේ' },
+  { time: 'පෙ.ව. 9.45', title: 'පෝරුවේ චාරිත්‍ර', icon: Music, desc: 'Traditional Poruwa ceremony — ශ්‍රී සුභ පෝරුව' },
+  { time: 'ප.ව. 12.30', title: 'Buffet Opening', icon: Utensils, desc: 'Grand celebratory feast / ශ්‍රී රාත්‍රී ශ්‍රී ශ්‍රී සංග්‍රහය' },
+  { time: 'ප.ව. 4.00', title: 'Wedding Send Off', icon: PartyPopper, desc: 'Farewell as we begin our journey together' },
 ];
 
 export const Timeline: React.FC = () => {
@@ -17,6 +17,7 @@ export const Timeline: React.FC = () => {
           The Day's Flow
         </span>
         <h2 className="text-5xl font-display text-stone-800 tracking-tight">Wedding Timeline</h2>
+        <p className="text-stone-400/80 font-serif text-sm mt-3 italic">2026 දෙසැම්බර් 03 · Grand Rockland, Matara</p>
         <div className="w-12 h-px bg-brand-beige/30 mx-auto mt-6" />
       </div>
 

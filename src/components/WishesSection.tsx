@@ -19,6 +19,9 @@ const getRelativeTime = (date: Date) => {
   return `${Math.floor(hours / 24)}d ago`;
 };
 
+import { GOOGLE_SCRIPT_URL } from '../config';
+import { toast } from 'sonner';
+
 export const WishesSection: React.FC = () => {
   const [wishes, setWishes] = useState<Wish[]>([]);
   const [formData, setFormData] = useState({ name: '', message: '' });
@@ -26,16 +29,19 @@ export const WishesSection: React.FC = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!formData.name || !formData.message) return;
+    if (!formData.name.trim() || !formData.message.trim()) {
+      toast.error('Please enter both your name and message.');
+      return;
+    }
     setIsSubmitting(true);
 
     try {
       // Send data to Google Sheets
-      const scriptUrl = 'https://script.google.com/macros/s/AKfycbyay20jbF63BRUj8JGGbUbYkYS3Us-DpLZc2Hs34si_qKJgxs_81xpNBniXsBNFsYOt7g/exec';
+      const scriptUrl = GOOGLE_SCRIPT_URL;
       const payload = new FormData();
       payload.append('sheet', 'Wishes');
-      payload.append('name', formData.name);
-      payload.append('message', formData.message);
+      payload.append('name', formData.name.trim());
+      payload.append('message', formData.message.trim());
 
       await fetch(scriptUrl, {
         method: 'POST',
@@ -45,16 +51,18 @@ export const WishesSection: React.FC = () => {
 
       const newWish: Wish = {
         id: Date.now().toString(),
-        name: formData.name,
-        message: formData.message,
+        name: formData.name.trim(),
+        message: formData.message.trim(),
         createdAt: new Date(),
       };
       
       // Prepend the new wish to the list
       setWishes(prev => [newWish, ...prev]);
       setFormData({ name: '', message: '' });
+      toast.success('Thank you for your warm blessing!');
     } catch (error) {
       console.error('Error submitting wish: ', error);
+      toast.error('Could not submit wish. Please try again.');
     } finally {
       setIsSubmitting(false);
     }

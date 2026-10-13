@@ -3,9 +3,9 @@ import { motion } from 'motion/react';
 import { MapPin, Navigation, Compass, Map } from 'lucide-react';
 
 export const Location: React.FC = () => {
-  const venueAddress = "Hilton Colombo";
-  const mapUrl = `https://maps.google.com/maps?q=Hilton+Colombo&t=&z=14&ie=UTF8&iwloc=&output=embed`;
-  const liveLocationUrl = "https://maps.app.goo.gl/d7QQvgGSUQEUGNzx5";
+  const venueAddress = "Grand Rockland Hotel & Restaurant, NO 474 Welewatta, Matara";
+  const mapUrl = `https://maps.google.com/maps?q=Grand+Rockland+Hotel+Matara&t=&z=14&ie=UTF8&iwloc=&output=embed`;
+  const liveLocationUrl = "https://maps.app.goo.gl/Crwa9yRV4fGtZRVi7";
 
   return (
     <div className="max-w-[85rem] mx-auto px-6 relative py-12">
@@ -45,11 +45,12 @@ export const Location: React.FC = () => {
                   <MapPin className="text-brand-beige-deep w-5 h-5" />
                 </div>
                 <div>
-                  <p className="text-2xl font-serif text-stone-800 mb-1">Hilton Colombo</p>
-                  <p className="text-[11px] uppercase tracking-[0.2em] font-medium text-stone-400 leading-relaxed mb-6">Colombo</p>
+                  <p className="text-2xl font-serif text-stone-800 mb-1">Grand Rockland</p>
+                  <p className="text-[11px] uppercase tracking-[0.2em] font-medium text-stone-400 leading-relaxed mb-1">NO 474 Welewatta, Matara</p>
+                  <p className="text-[11px] font-medium text-brand-beige-deep leading-relaxed mb-6">පෝරුවේ චාරිත්‍ර — පෙ.ව. 9.45 ට</p>
                   
                   <p className="text-stone-500/90 italic font-serif text-lg leading-relaxed max-w-sm mb-10 pl-4 border-l-[1.5px] border-brand-beige/40">
-                    "A serene and elegant setting where we will begin our new chapter together."
+                    "Grand Rockland හිදී ඔබව ආදරයෙන් සාදරයෙන් පිළිගනිමු."
                   </p>
 
                   <a
@@ -85,7 +86,7 @@ export const Location: React.FC = () => {
             <div className="absolute inset-0 bg-brand-beige/10 mix-blend-multiply pointer-events-none z-20 group-hover/map:opacity-0 transition-opacity duration-1000" />
             
             <iframe
-              title="Hilton Colombo Location"
+              title="Grand Rockland Matara Location"
               src={mapUrl}
               width="100%"
               height="100%"

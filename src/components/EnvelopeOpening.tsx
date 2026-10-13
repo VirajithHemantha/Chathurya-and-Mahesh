@@ -1,11 +1,9 @@
 import React, { useState, useEffect } from "react";
+import { getGuestDisplayName } from "../utils/guest";
 
 export function EnvelopeOpening({ onComplete, onMusicStart }: { onComplete: () => void, onMusicStart?: () => void }) {
   const [opened, setOpened] = useState(false);
-  
-  const params = new URLSearchParams(window.location.search);
-  const prefix = params.get('prefix');
-  const guestName = params.get('name');
+  const guestDisplayName = getGuestDisplayName();
 
   useEffect(() => {
     if (opened) {
@@ -149,7 +147,7 @@ export function EnvelopeOpening({ onComplete, onMusicStart }: { onComplete: () =
           display: flex;
           align-items: center;
           gap: 12px;
-          margin: 16px 0;
+          margin: 12px 0;
           z-index: 2;
         }
         .divider-line {
@@ -169,10 +167,10 @@ export function EnvelopeOpening({ onComplete, onMusicStart }: { onComplete: () =
         .text-eyebrow {
           font-family: 'Montserrat', sans-serif;
           font-size: 10px;
-          letter-spacing: 0.45em;
+          letter-spacing: 0.3em;
           text-transform: uppercase;
           color: #3B1C22;
-          margin-bottom: 20px;
+          margin-bottom: 14px;
           margin-top: auto;
           z-index: 2;
           font-weight: 400;
@@ -180,10 +178,10 @@ export function EnvelopeOpening({ onComplete, onMusicStart }: { onComplete: () =
 
         .text-names {
           font-family: "Great Vibes", cursive;
-          font-size: 60px;
+          font-size: 58px;
           line-height: 1.1;
           color: #3B1C22;
-          margin: 0 0 10px 0;
+          margin: 0 0 8px 0;
           font-weight: 400;
           z-index: 2;
           display: flex;
@@ -193,7 +191,7 @@ export function EnvelopeOpening({ onComplete, onMusicStart }: { onComplete: () =
         
         .text-ampersand {
           font-family: "Great Vibes", cursive;
-          font-size: 40px;
+          font-size: 38px;
           display: block;
           margin: -2px 0;
           color: #D4AF37;
@@ -201,35 +199,46 @@ export function EnvelopeOpening({ onComplete, onMusicStart }: { onComplete: () =
         }
 
         .text-details {
-          font-family: 'Montserrat', sans-serif;
-          font-size: 9.5px;
-          letter-spacing: 0.22em;
-          text-transform: uppercase;
-          color: #722F37;
-          line-height: 2.2;
+          font-family: 'Cormorant Garamond', serif;
+          font-size: 11px;
+          letter-spacing: 0.08em;
+          color: #3B1C22;
+          line-height: 2;
           margin-bottom: auto;
           z-index: 2;
-          font-weight: 300;
+          font-weight: 400;
         }
 
         .text-date {
           display: block;
-          margin: 12px 0;
+          margin: 8px 0 4px;
           font-size: 11px;
-          font-weight: 500;
-          letter-spacing: 0.28em;
-          color: #3B1C22;
+          font-weight: 600;
+          letter-spacing: 0.15em;
+          color: #722F37;
+          font-family: 'Montserrat', sans-serif;
+          text-transform: uppercase;
         }
 
         .text-church {
           font-family: "Cormorant Garamond", serif;
-          font-size: 14px;
+          font-size: 13px;
           font-style: italic;
           font-weight: 400;
-          letter-spacing: 0.1em;
+          letter-spacing: 0.05em;
           color: #3B1C22;
-          margin-top: 4px;
+          margin-top: 2px;
           text-transform: none;
+          display: block;
+        }
+
+        .text-poruwa {
+          font-family: 'Cormorant Garamond', serif;
+          font-size: 10px;
+          color: #722F37;
+          letter-spacing: 0.05em;
+          margin-top: 4px;
+          display: block;
         }
 
         /* Envelope Fold (Left Flap) */
@@ -349,17 +358,17 @@ export function EnvelopeOpening({ onComplete, onMusicStart }: { onComplete: () =
             height: 520px;
           }
           .text-names {
-            font-size: 46px;
+            font-size: 44px;
           }
           .text-ampersand {
-            font-size: 32px;
+            font-size: 30px;
           }
           .corner-ornament {
             width: 45px;
             height: 45px;
           }
           .card-border {
-            padding: 30px 16px;
+            padding: 28px 14px;
           }
           .bow-center {
             width: 140px;
@@ -412,7 +421,7 @@ export function EnvelopeOpening({ onComplete, onMusicStart }: { onComplete: () =
               </svg>
 
               <div className="text-eyebrow">
-                {guestName ? `Dear ${prefix} ${guestName},` : 'Promise of Love'}
+                {guestDisplayName ? `Dear ${guestDisplayName},` : 'ශ්‍රී සුභ මංගලම්'}
               </div>
 
               <div className="divider">
@@ -422,10 +431,13 @@ export function EnvelopeOpening({ onComplete, onMusicStart }: { onComplete: () =
               </div>
 
               <h1 className="text-names">
-                Isuri
+                Chathurya
                 <span className="text-ampersand">&</span>
-                &nbsp;Duvindu
+                &nbsp;Mahesh
               </h1>
+              <div style={{ fontFamily: 'Cinzel, Georgia, serif', fontSize: '13px', color: '#b08968', marginTop: '-4px', marginBottom: '8px', letterSpacing: '0.05em' }}>
+                චතුර්යා &amp; මහේෂ්
+              </div>
 
               <div className="divider">
                 <div className="divider-line" />
@@ -434,10 +446,13 @@ export function EnvelopeOpening({ onComplete, onMusicStart }: { onComplete: () =
               </div>
 
               <div className="text-details">
-                Request the honour of your presence<br />
-                <span className="text-date">Tuesday 05 January 2027 At 09:00 AM</span>
-                <span className="text-church">Hilton Colombo</span><br />
-                Colombo
+                සමඟ අතිනත ගැනීමේ ප්‍රීතිය නිමිත්තෙන් ඉතා සාදරයෙන් ආරාධනා කරමු.<br />
+                <span className="text-date">2026 දෙසැම්බර් 03 වන දින</span>
+                <span className="text-church">මාතර · Grand Rockland · උත්සව ශාලාව</span>
+                <span style={{display:'block', marginTop:'4px', fontSize:'10px', color:'#555'}}>
+                  පෙ.ව. 9.00 සිට ප.ව. 4.00 දක්වා
+                </span>
+                <span className="text-poruwa">(පෝරුවේ චාරිත්‍ර පෙ.ව. 9.45 ට)</span>
               </div>
             </div>
           </div>
