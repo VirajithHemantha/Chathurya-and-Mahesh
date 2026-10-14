@@ -44,7 +44,7 @@ export const CeremonyDetails: React.FC = () => {
                 </div>
                 <div>
                   <h4 className="font-serif text-2xl sm:text-3xl text-stone-800 mb-2 group-hover:text-brand-beige-deep transition-colors duration-500">2026 දෙසැම්බර් 03</h4>
-                  <p className="text-stone-500/80 text-[10px] sm:text-[11px] uppercase tracking-[0.3em] font-bold">Saturday, December 03, 2026</p>
+                  <p className="text-stone-500/80 text-[10px] sm:text-[11px] uppercase tracking-[0.3em] font-bold">Thursday, December 03, 2026</p>
                 </div>
               </div>
 
