@@ -43,7 +43,7 @@ export const CoupleDetails: React.FC = () => {
             <span className="text-brand-beige-deep uppercase tracking-[0.4em] text-[10px] font-bold mb-3 block">The Groom</span>
             <h3 className="text-4xl sm:text-5xl font-display text-stone-800 mb-3 drop-shadow-sm">මහේෂ්</h3>
             <p className="text-stone-500/90 font-serif text-base sm:text-lg leading-relaxed">
-              එම්. ඩී. ආරියදාස (නැසීගිය) මහතාගේ
+              එච්.ඩබ්ලිව්.ආරියදාස (නැසීගිය) මහතාගේ
             </p>
             <p className="text-stone-500/80 font-serif text-sm sm:text-base">
               සහ එම මැතිණියගේ (නැසීගිය)
