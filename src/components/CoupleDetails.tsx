@@ -24,7 +24,7 @@ export const CoupleDetails: React.FC = () => {
             Chathurya <span className="italic text-brand-beige-deep font-light mx-2">&</span>&nbsp;Mahesh
           </h2>
           <p className="text-2xl sm:text-3xl font-serif text-brand-beige-deep mt-3 font-normal">
-            චතුර්යා &amp; මහේෂ්
+            චතූර්යා &amp; මහේෂ්
           </p>
         </motion.div>
       </div>
@@ -49,14 +49,14 @@ export const CoupleDetails: React.FC = () => {
               සහ එම මැතිණියගේ (නැසීගිය)
             </p>
             <p className="text-brand-beige-deep font-serif text-sm mt-1 italic">ආදරණීය පුත්</p>
-            <p className="text-stone-400/70 font-sans text-xs mt-2 tracking-wider">📞 071-3688634</p>
+            <p className="text-stone-400/70 font-sans text-xs mt-2 tracking-wider">📞 071-8688634</p>
           </div>
           <div className="hidden lg:flex justify-end mt-8">
             <Heart className="w-6 h-6 text-brand-beige/60 fill-brand-beige/20 transform hover:scale-110 transition-transform cursor-pointer" />
           </div>
         </motion.div>
 
-        {/* Center Couple Image (Arch Design) — using x.jpg */}
+        {/* Center Couple Image (Arch Design) — using g.jpeg */}
         <motion.div
           initial={{ opacity: 0, scale: 0.95, y: 20 }}
           whileInView={{ opacity: 1, scale: 1, y: 0 }}
@@ -69,7 +69,7 @@ export const CoupleDetails: React.FC = () => {
 
           <div className="relative w-[300px] h-[400px] sm:w-[360px] sm:h-[500px] lg:w-[420px] lg:h-[580px] rounded-[12rem_12rem_16px_16px] overflow-hidden border-[6px] border-white/90 shadow-[0_20px_50px_rgba(176,137,104,0.2)] bg-brand-champagne mx-auto z-10 transition-transform duration-700 group-hover:-translate-y-2">
             <img
-              src="/x.jpg"
+              src="/g.jpeg"
               onError={(e) => {
                 e.currentTarget.src = "https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&q=80&w=800&h=1000";
                 e.currentTarget.onerror = null;
@@ -100,7 +100,7 @@ export const CoupleDetails: React.FC = () => {
         >
           <div className="mb-4 flex flex-col items-center lg:items-start">
             <span className="text-brand-beige-deep uppercase tracking-[0.4em] text-[10px] font-bold mb-3 block">The Bride</span>
-            <h3 className="text-4xl sm:text-5xl font-display text-stone-800 mb-3 drop-shadow-sm">චතුර්යා</h3>
+            <h3 className="text-4xl sm:text-5xl font-display text-stone-800 mb-3 drop-shadow-sm">චතූර්යා</h3>
             <p className="text-stone-500/90 font-serif text-base sm:text-lg leading-relaxed">
               ආර්. වික්‍රමනායක මහතාගේ
             </p>

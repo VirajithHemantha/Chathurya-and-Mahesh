@@ -436,7 +436,7 @@ export function EnvelopeOpening({ onComplete, onMusicStart }: { onComplete: () =
                 &nbsp;Mahesh
               </h1>
               <div style={{ fontFamily: 'Cinzel, Georgia, serif', fontSize: '13px', color: '#b08968', marginTop: '-4px', marginBottom: '8px', letterSpacing: '0.05em' }}>
-                චතුර්යා &amp; මහේෂ්
+                චතූර්යා &amp; මහේෂ්
               </div>
 
               <div className="divider">

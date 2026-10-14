@@ -26,7 +26,7 @@ export const CeremonyDetails: React.FC = () => {
 
             <h2 className="text-4xl sm:text-5xl lg:text-6xl font-display text-stone-800 mb-6 leading-[1.2] drop-shadow-sm">
               <span className="font-serif text-brand-beige-deep block font-medium">
-                චතුර්යා සහ මහේෂ්
+                චතූර්යා සහ මහේෂ්
               </span>
             </h2>
 

@@ -25,7 +25,7 @@ export const Hero: React.FC = () => {
       >
         <img
           src="/y.jpg"
-          alt="චතුර්යා සහ මහේෂ්"
+          alt="චතූර්යා සහ මහේෂ්"
           className="w-full h-full object-cover opacity-90"
           style={{ objectPosition: "center 20%" }}
         />
@@ -75,7 +75,7 @@ export const Hero: React.FC = () => {
             </h1>
 
             <p className="relative mt-4 sm:mt-6 text-2xl sm:text-3xl lg:text-4xl font-serif text-brand-beige-deep tracking-wider font-normal drop-shadow-sm">
-              චතුර්යා &amp; මහේෂ්
+              චතූර්යා &amp; මහේෂ්
             </p>
           </div>
 
